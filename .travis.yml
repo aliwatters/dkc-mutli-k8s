@@ -15,10 +15,10 @@ before_install:
   - gcloud config set compute/zone us-central1-c
   - gcloud container clusters get-credentials dkc-multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t aliwatters/react-text -f ./client/Dockerfile.dev client
+  - docker build -t aliwatters/dkc-react-test -f ./client/Dockerfile.dev client
 
 scripts:
-  - docker run -e CI=true aliwatters/react-test npm test
+  - docker run -e CI=true aliwatters/dkc-react-test npm test
 
 deploy:
   provider: script
