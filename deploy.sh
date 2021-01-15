@@ -13,4 +13,4 @@ docker push aliwatters/dkc-multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=aliwatters/dkc-multi-server:$SHA
 kubectl set image deployments/client-deployment client=aliwatters/dkc-multi-client:$SHA
-kubectl set image deployments/worker-deployment client=aliwatters/dkc-multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=aliwatters/dkc-multi-worker:$SHA
