@@ -15,6 +15,7 @@ spec:
       containers:
         - name: server
           image: aliwatters/dkc-multi-server
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
           env:
